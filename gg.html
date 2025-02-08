@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('bull.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        header {
+            background-color: rgba(46, 125, 50, 0.9);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            margin: 2rem auto;
+            max-width: 1200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #tagline {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #2e7d32;
+            margin-top: 1rem;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        .service-card h3 {
+            color: #2e7d32;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background-color: #2e7d32;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 1rem;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #1b5e20;
+        }
+
+        .partners {
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+        }
+
+        .partners h2 {
+            color: #2e7d32;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .partners ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .partners li {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .contact {
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #f1f8e9;
+            border-radius: 8px;
+        }
+
+        .contact h2 {
+            color: #2e7d32;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact p {
+            text-align: center;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: rgba(46, 125, 50, 0.9);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 1rem;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 1rem;
+            }
+
+            .partners ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .partners li {
+                width: 80%;
+                text-align: center;
+            }
+
+            .contact p {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .partners li {
+                width: 100%;
+            }
+
+            .contact p {
+                padding: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Triraj Research And Asset Management Consultancy</h1>
+        <nav>
+            <a href="#" class="btn">Home</a>
+            <a href="#services" class="btn">Services</a>
+            <a href="#partners" class="btn">partners</a>
+            <a href="#contact" class="btn">Contact</a>
+            <a href="https://surveyheart.com/form/679002c8d292ca22c768e596" class="btn" >Apply Now</a>
+        </nav>
+    </header>
+
+    <div id="tagline"></div>
+
+    <main>
+        <h2>About Us</h2>
+        <h4>Unlock financial success with Triraj Research And Asset Mangement Consultancy. Our consultancy deals in Mutual Funds, Stock Broking, IPOs, Futures & Options (F&O), Insurance(Term, Life, Health and Motor Insurances), Corporate Fixed Deposits (FDs), Assist in Taxation and Loans. Tailored strategies, market insights, and personalized guidance ensure optimized investments, risk management, and financial growth for individuals and businesses. Achieve your goals confidently with our trusted advisory services.</h4>
+        <h2 id="services">Our Services </h2>
+        <div class="services" >
+            <div class="service-card">
+                <h3>Mutual Funds</h3>
+                <p>Explore a variety of mutual fund options to grow your wealth with expert guidance and minimal risk.</p>
+                <a href="#mutual-funds" class="btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>Stock Broking</h3>
+                <p>Invest in stocks with our reliable and user-friendly stock broking services designed for success.</p>
+                <a href="#stock-broking" class="btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>Insurance</h3>
+                <p>Protect your family and assets with our comprehensive insurance services tailored to your needs.</p>
+                <a href="#insurance" class="btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>Wealth Management</h3>
+                <p>Get personalized wealth management strategies to secure your financial future.</p>
+                <a href="#wealth-management" class="btn">Learn More</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>Retirement Planning</h3>
+                <p>Plan your retirement with confidence and achieve financial independence in your golden years.</p>
+                <a href="#retirement-planning" class="btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>Fixed Deposits-FD's</h3>
+                <p>We offer Fixed Deposit services with secure and high-return investment options to help you grow your wealth with stability.</p>
+                <a href="#fd" class="btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>Loans</h3>
+                <p>We offer tailored Loan solutions to meet your financial needs, ensuring seamless access to funds for personal or business growth.</p>
+                <a href="#loans" class="btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <h3>Taxation</h3>
+                <p>We provide expert Taxation assistance to help you optimize your tax planning.</p>
+                <a href="#taxation" class="btn">Learn More</a>
+            </div>
+            
+        </div>
+
+        <section class="partners">
+            <h2 id="partners">Our Partners</h2>
+            <ul>
+                <li><b><a href="https://upstox.com/open-account/?f=2HC5LN" class="btn">UPSTOX</a></b></li>
+                <li><b><a href="https://tinyurl.com/yze9587z?code=EU4783" class="btn">NJ E-WEALTH</a></b></li>
+                <li><b><a href="https://www.pbpartners.com/v2/partner/IP129382 " class="btn">Policy Bazzar</a></b></li>
+                <li><b><a href="" class="btn"> LIC HFL</a></b></li>
+                <li><b><a href="" class="btn">Shriram Finance</a></b></li>
+                <li><b><a href="" class="btn">Bajaj Finserv</a></b></li>
+            </ul>
+        </section>
+
+        <section id="mutual-funds">
+            <h2>Mutual Funds</h2>
+            <p><p>Mutual funds are pooled investment vehicles that allow individuals to invest in a diversified portfolio of assets. Managed by professionals, they offer accessible ways for investors to benefit from market growth without the need for managing each asset individually.</p>
+            <h3>Types of Mutual Funds</h3>
+            <ul>
+                <li><strong>Equity Mutual Funds:</strong> Invest in stocks, providing higher growth potential with higher risk.</li>
+                <li><strong>Debt Mutual Funds:</strong> Focus on fixed-income securities for stability and regular returns.</li>
+                <li><strong>Hybrid Funds:</strong> A balanced approach with a mix of equities and debt for moderate risk.</li>
+                <li><strong>Index Funds:</strong> Passively managed funds that track market indices, offering low fees.</li>
+            </ul>
+    
+            <h3>Benefits of Investing in Mutual Funds</h3>
+            <ul>
+                <li><strong>Diversification:</strong> Spreads investments across asset classes, reducing risk.</li>
+                <li><strong>Professional Management:</strong> Managed by experts who handle all investment decisions.</li>
+                <li><strong>Liquidity:</strong> Easy to buy and sell, providing flexibility.</li>
+                <li><strong>Affordability:</strong> Allows investments with small capital.</li>
+            </ul>
+    
+            <h3>Choosing the Right Mutual Fund</h3>
+            <p>Consider your investment goals, risk tolerance, and financial horizon when selecting a mutual fund. With the right strategy, mutual funds can offer long-term financial security and growth.</p></p>
+        </section>
+
+        <section id="stock-broking">
+            <h2>Stock Broking</h2>
+            <p>At<b> Triraj Research And Asset Management Consultancy</b>, we are committed to empowering investors with the tools, insights, and expertise needed to navigate the dynamic world of stock markets. As a leading provider of stock broking services, we offer a seamless, secure, and efficient trading experience tailored to meet the unique needs of our clients.
+                <br><b>Why Choose Our Stock Broking Services?</b><br>
+                <ul>
+<b><li>Comprehensive Trading Options</li></b>
+Trade across a wide range of financial instruments, including:
+
+<br><b>Equities</b> Buy and sell shares of leading companies.
+<b>Derivatives:</b> Hedge risks or amplify returns with futures and options.
+<b>Mutual Funds:</b> Diversify your portfolio with professionally managed funds.
+<b>Commodities & Currencies:</b> Explore opportunities beyond traditional equities.
+<b><li>Advanced Trading Platforms</li></b>
+Experience cutting-edge technology with our intuitive online and mobile trading platforms. Features include:
+
+Real-time market data and analysis.
+Advanced charting tools for informed decision-making.
+Secure and fast execution of trades.
+<b><li>Expert Research and Insights</li></b>
+Stay ahead with our in-depth market research, daily updates, and expert recommendations. Whether you're a seasoned trader or a beginner, our insights will guide your investment decisions.
+
+<b><li>Personalized Support</li></b>
+Our dedicated team of advisors and customer support professionals is always available to assist you, ensuring a smooth and hassle-free experience.
+
+<b><li>Competitive Pricing</li></b>
+Benefit from our transparent and affordable brokerage fees, designed to maximize your returns.
+                    </ul>
+            </p>
+        </section>
+
+        <section id="wealth-management">
+            <h2>Wealth Management</h2>
+            <p>At Triraj Research And Asset Management Consultancy, we offer comprehensive wealth management solutions designed to help individuals, families, and businesses achieve long-term financial success. Our expert advisors provide personalized investment strategies, financial planning, and asset management to grow and protect your wealth.
+                <br>With a <b>client-centric approach </b>, innovative solutions, and expert guidance, Triraj Research And Asset Management Consultancy ensures your wealth works for you
+            </p>
+        </section>
+
+        <section id="retirement-planning">
+            <h2>Retirement Planning</h2>
+            <p>At Triraj Research And Asset Management Consultancy, we help you secure a financially independent and comfortable retirement with our <b>expert retirement planning services</b>. Whether you're just starting to save or nearing retirement, our tailored strategies ensure that you have a steady income and financial stability in your golden years.
+                <br>With our expert guidance and strategic financial planning, you can retire with confidence and peace of mind. Start planning today for a secure tomorrow!
+            </p>
+        </section>
+
+        <section id="insurance">
+            <h2>Insurance</h2>
+            <p>We offer a variety of insurance plans including life, health, and property insurance to ensure your assets and loved ones are protected against unforeseen events.</p>
+            <p>Insurance provides protection against financial risks. Whether it’s life, health, motor, or SME insurance, the right coverage offers peace of mind and security for you and your loved ones.</p>
+        
+        <h3>Life Insurance</h3>
+        <p>Life insurance ensures financial stability for your family in case of your passing. Common types include:</p>
+        <ul>
+            <li><strong>Term Life Insurance:</strong> Affordable coverage for a specific period.</li>
+            <li><strong>Whole Life Insurance:</strong> Lifelong coverage with a savings component.</li>
+            <li><strong>Endowment Plans:</strong> Combine insurance with savings for long-term financial goals.</li>
+        </ul>
+
+        <h3>Health Insurance</h3>
+        <p>Health insurance covers medical expenses, ensuring access to healthcare without depleting your savings. It can cover hospitalization, surgery, and critical illnesses.</p>
+
+        <h3>Motor Insurance</h3>
+        <p>Motor insurance protects your vehicle from damage, theft, or third-party liabilities. Types include:</p>
+        <ul>
+            <li><strong>Third-Party Insurance:</strong> Covers damage to others due to your vehicle.</li>
+            <li><strong>Comprehensive Insurance:</strong> Covers both third-party liabilities and your vehicle’s damage or loss.</li>
+        </ul>
+
+        <h3>SME Insurance</h3>
+        <p>SME insurance provides tailored coverage to protect your business from risks like property damage or legal liabilities, ensuring continuity and stability.</p>
+        </section>
+
+        <section id="fd">
+            <h2>Fixed Diposits-FD's</h2>
+            <p>At Triraj Research And Asset Management Consultancy, we help you secure a financially independent and comfortable retirement with our <b>expert retirement planning services</b>. Whether you're just starting to save or nearing retirement, our tailored strategies ensure that you have a steady income and financial stability in your golden years.
+                <br>With our expert guidance and strategic financial planning, you can retire with confidence and peace of mind. Start planning today for a secure tomorrow!
+            </p>
+        </section>
+
+        <section id="loans">
+            <h2>Loans</h2>
+            <p>
+                <b>Loan Services by Triraj Research & Asset Management Consultancy</b>
+                <br><br>
+                At Triraj Research & Asset Management Consultancy, we understand that financial needs vary for individuals and businesses. Whether you're looking for funds to expand your business, manage personal expenses, or invest in new opportunities, we offer customized loan solutions tailored to your needs.
+                
+                <h4>Types of Loans We Offer:</h4>
+                <li><b>Personal Loans – </b></li> and hassle-free financing for medical expenses, home renovations, education, or any personal needs.
+            
+                <li><b>Home Loans –</b></li> Competitive interest rates for purchasing, renovating, or constructing your dream home.
+                
+                <li><b>Gold Loans –</b></li> Instant liquidity by leveraging your gold assets at attractive interest rates.
+                <li><b>Loan Against Property – </b></li>Unlock the value of your property for personal or business financing needs.
+            </p>
+        </section>
+
+        <section id="Taxation">
+            <h2>Taxation</h2>
+            <p><h4>Taxation Assistance Services by Triraj Research & Asset Management Consultancy </h4>
+                Managing taxes efficiently is essential for both individuals and businesses. At Triraj Research & Asset Management Consultancy, we provide comprehensive Taxation Assistance Services to help you reduce tax liabilities, stay compliant with regulations, and optimize financial planning.
+                
+                Our Taxation Services
+                <h4>1. Income Tax Planning & Filing</h4>
+                ✅ Assistance with Income Tax Return (ITR) filing for salaried individuals, business owners, and freelancers. <br>
+                ✅ Tax-saving strategies to help you maximize deductions under Sections 80C, 80D, and other exemptions. <br>
+                ✅ Tax computation and planning to ensure you pay the right amount and avoid penalties.
+                
+                <h4>2. GST (Goods & Services Tax) Services</h4>
+                ✅ GST Registration – Assistance with new GST registration for businesses. <br>
+                ✅ GST Return Filing – Timely and accurate filing of GSTR-1, GSTR-3B, and annual returns. <br>
+                ✅ GST Compliance & Advisory – Ensuring compliance with the latest GST rules and regulations.
+                
+                <h4>3. Business & Corporate Taxation </h4>
+                ✅ Tax planning for small businesses, startups, and corporate entities. <br>
+                ✅ Filing of TDS (Tax Deducted at Source) returns. <br>
+                ✅ Assistance with company tax audits and financial reporting. <br>
+                ✅ Advisory on tax-efficient business structures and investments.
+                
+                <h4>4. Tax Saving & Investment Advisory</h4>
+                ✅ Personalized tax-saving strategies through Mutual Funds, Fixed Deposits, Insurance, and other tax-saving instruments. <br>
+                ✅ Guidance on capital gains tax planning for stock market investors and real estate owners. <br>
+                ✅ Assistance with HUF (Hindu Undivided Family) tax benefits and estate planning.</p> 
+        </section>
+
+        <section class="contact" id="contact" >
+            <h2>Contact Us</h2>
+            <p>Phone no :  8103011347, 7415829081</p>
+            <p>A-125, vijay Nagar, Lalghati, Bhopal</p>
+            <p>Email: <a href="trirajrnamgt.co@gmail.com">trirajrnamgt.co@gmail.com</a></p>
+        </section>
+
+        
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Finance Solutions. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Tagline text
+        const tagline = "पैसा लगाएगा, तभी तो बढ़ाएगा।";
+
+        // Target the tagline container
+        const taglineContainer = document.getElementById("tagline");
+
+        // Animate tagline one letter at a time
+        let currentIndex = 0;
+
+        function displayTagline() {
+            if (currentIndex < tagline.length) {
+                taglineContainer.textContent += tagline[currentIndex];
+                currentIndex++;
+                setTimeout(displayTagline, 100); // Adjust speed of animation here
+            } else {
+                taglineContainer.style.color = "#FFFFFF"; // Highlight tagline after completion
+            }
+        }
+
+        // Start the animation on page load
+        window.onload = displayTagline;
+    </script>
+</body>
+</html>
